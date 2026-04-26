@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package audio;
+
+service AudioService {
+  rpc UploadAudioStream (stream UploadAudioRequest) returns (UploadAudioResponse);
+}
+
+message UploadAudioRequest {
+  uint32 session_id = 1;
+  bytes audio_data = 2;
+}
+
+message UploadAudioResponse {
+  string status = 1;
+}
