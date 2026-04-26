@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AndroidApp</string>
+    <string name="hello_message">Audio Stream Client</string>
+    <string name="audio_service_channel_name">Audio Stream Service</string>
+    <string name="audio_service_notification_title">Audio gRPC Client</string>
+    <string name="host_input_hint">Server host address</string>
+    <string name="default_host">10.8.0.1</string>
+    <string name="port_input_hint">Server port</string>
+    <string name="default_port">4392</string>
+    <string name="host_status_checking">Checking host reachability...</string>
+    <string name="host_status_reachable">Host is reachable</string>
+    <string name="host_status_unreachable">Host is unreachable</string>
+    <string name="stream_status_idle">Stream: idle</string>
+    <string name="stream_status_starting">Stream: starting</string>
+    <string name="stream_status_running">Stream: running</string>
+    <string name="stream_status_stopped">Stream: stopped</string>
+    <string name="stream_status_error">Stream: error</string>
+    <string name="start_service_button">Start Foreground Service</string>
+    <string name="stop_service_button">Stop Foreground Service</string>
+</resources>

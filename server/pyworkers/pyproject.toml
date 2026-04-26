@@ -1,0 +1,17 @@
+[project]
+name = "pyworkers"
+version = "0.1.0"
+readme = "README.md"
+dependencies = [
+    "asyncpg>=0.29.0",
+    "wyoming>=1.6.0",
+    "click>=8.3.3",
+    "faster-whisper>=1.2.1",
+    "pyannote-audio",
+    "sqlalchemy>=2.0.49",
+    "ffmpeg>=1.4",
+    "torchcodec>=0.11.1",
+    "torchaudio>=2.11.0",
+    "torchvision>=0.26.0",
+    "aiofiles>=25.1.0",
+]

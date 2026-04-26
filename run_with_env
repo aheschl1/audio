@@ -1,0 +1,26 @@
+#!/bin/bash
+set -euo pipefail
+
+ENV_FILE=".env"
+
+# Optional env file as first arg, e.g. ./run_with_env .env.local -- cmd arg1
+if [[ $# -gt 0 && "$1" == *.env* && -f "$1" ]]; then
+	ENV_FILE="$1"
+	shift
+fi
+
+# Optional separator before command, e.g. ./run_with_env -- cmd arg1
+if [[ $# -gt 0 && "$1" == "--" ]]; then
+	shift
+fi
+
+if [[ $# -eq 0 ]]; then
+	echo "Usage: $0 [env-file] [--] <command> [args...]" >&2
+	exit 1
+fi
+
+set -o allexport
+source "$ENV_FILE"
+set +o allexport
+
+exec "$@"
